@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Skin Manager</title>
+	<link href="css/metro.css" rel="stylesheet">
+	<link href="css/metro-icons.css" rel="stylesheet">
+	<script src="js/jquery-2.1.3.min.js"></script>
+	<script src="js/metro.js"></script>
+
+	<style type="text/css">
+		body {
+			background: #DA4429;
+			font-size: 18px;
+			min-height: 450px !important;
+		}
+
+		#content {
+			background: #000000;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			-ms-interpolation-mode: nearest-neighbor;    /* IE (non-standard property) */
+			image-rendering: -moz-crisp-edges;           /* Firefox */
+			image-rendering:   -o-crisp-edges;           /* Opera */
+			image-rendering: -webkit-optimize-contrast;  /* Webkit (non-standard naming) */
+			image-rendering: pixelated;
+			position: absolute;
+			left: 2px;
+			right: 2px;
+			top: 45px;
+			bottom: 2px;
+		}
+
+		.buttoncontainer {
+			float: right;
+		}
+
+		.buttoncontainer button {
+			margin-left: 10px;
+		}
+
+		.app-bar .app-bar-menu > li:hover, .app-bar .app-bar-menu > li > a:hover, .app-bar .app-bar-menu > li:active, .app-bar .app-bar-menu > li > a:active, .app-bar .app-bar-pullmenu .app-bar-menu, .app-bar-element:hover, .app-bar-pullbutton:hover, .app-bar .app-bar-pullmenu .app-bar-menu .d-menu, .app-bar .app-bar-pullmenu .app-bar-menu .d-menu > li > a:hover {
+			background-color: #B3351E !important;
+		}
+
+		.app-bar .app-bar-pullmenu .app-bar-menu li:hover, .app-bar .app-bar-pullmenu .app-bar-menu li a:hover {
+			background: #DA4429 !important;
+		}
+
+		.app-bar .app-bar-pullmenu .app-bar-menu, .app-bar .app-bar-pullmenu .app-bar-menu .d-menu {
+			border-top: 1px solid #B3351E !important;
+		}
+
+		.app-bar .app-bar-menu > li .d-menu {
+			border: 2px solid #B3351E !important;
+		}
+
+		.app-bar, .notify-container, .notify, .notify .notify-closer {
+			background: #DA4429 !important;
+		}
+
+		.notify-container {
+			top: inherit !important;
+			bottom: 0 !important;
+			left: 0 !important;
+			max-width: 100% !important;
+			min-width: 100% !important;
+		}
+
+		.notify {
+			box-shadow: none !important;
+			max-width: 100% !important;
+			min-width: 100% !important;
+			color: #FFFFFF !important;
+		}
+
+		.notify .notify-closer {
+			right: 1rem !important;
+			color: #FFFFFF !important;
+		}
+
+		.bitly {
+			text-align: center;
+			border: 1px solid #1d1d1d;
+			padding: 5px;
+		}
+
+		iframe {
+			width: 100%;
+			height: 300px;
+			border: 1px solid #1d1d1d;
+		}
+
+	</style>
+
+	<script>
+
+	// Skin Manager
+
+	function open() {
+		var img = new Image();
+		img.onload = function() {
+			$(".save").attr("href", skin)
+			$(".apply-account").attr("href", "https://minecraft.net/profile/skin/remote?url=" + skin)
+			$("#content").css('background-image','url(' + skin + ')');
+			$("#content").html('');
+			if (this.width == 64 && this.height == 64) {
+				if (username == true) {
+					$.Notify({
+						caption: 'Skin loaded!',
+						content: ' '
+					});
+				} else {
+					$.Notify({
+						caption: 'Warning',
+						content: 'Skin Manager cannot check if the skin is valid when opened from a URL.',
+						keepOpen: true
+					});
+				}
+			} else if (this.width == 64 && this.height == 32) {
+				if (username == true) {
+					$.Notify({
+						caption: 'Warning',
+						content: 'This appears to be a skin designed for Minecraft 1.7 and below. It will load fine in Minecraft 1.8 and up, but may look weird on Minecraft Pocket Edition.',
+						keepOpen: true
+					});
+				} else {
+					$.Notify({
+						caption: 'Warning',
+						content: 'Skin Manager cannot check if the skin is valid when opened from a URL. Judging from the size, this skin appears to be designed for Minecraft 1.7 and below. It will load fine in Minecraft 1.8 and up, but may look weird on Minecraft Pocket Edition.',
+						keepOpen: true
+					});
+				}
+			} else {
+				$.Notify({
+					caption: 'Warning',
+					content: 'This does not appear to be a valid skin file.',
+					keepOpen: true
+				});
+			}
+		}
+		img.onerror = function() {
+			$.Notify({
+				caption: 'There was an error loading the skin :(',
+				content: ' '
+			});
+		}
+		img.src = skin;
+	}
+
+	function showDialog(id){
+		var dialog = $(id).data('dialog');
+		dialog.open();
+	}
+
+	function closeDialog(id){
+		var dialog = $(id).data('dialog');
+		dialog.close();
+	}
+
+	$(document).on('click', '#cancel', function() {
+		closeDialog($(this).parent().parent().parent());
+	});
+
+	$(document).on('click', '#username-confirm', function() {
+		if ( /\s/g.test($('#username-text').val()) || $('#username-text').val() === "" ) {
+			$.Notify({
+				caption: 'Invalid username',
+				content: 'Minecraft usernames cannot contain spaces or be blank.',
+				type: 'alert',
+				timeout: 5000
+			});
+		} else {
+			skin = "https://minotar.net/skin/" + $('#username-text').val();
+			username = true;
+			open();
+		}
+		closeDialog($(this).parent().parent().parent());
+	});
+
+	$(document).on('click', '#url-confirm', function() {
+		if ( /\s/g.test($('#url-text').val()) || $('#url-text').val() === "" ) {
+			$.Notify({
+				caption: 'Invalid username',
+				content: 'URLs cannot contain spaces or be blank.',
+				type: 'alert',
+				timeout: 5000
+			});
+		} else {
+			skin = $('#url-text').val();
+			console.log(skin);
+			username = false;
+			open();
+		}
+		closeDialog($(this).parent().parent().parent());
+	});
+
+	$(document).on('click', 'a[href$="#username"]', function() {
+		showDialog('#username');
+	});
+
+	$(document).on('click', 'a[href$="#url"]', function() {
+		showDialog('#url');
+	});
+
+	$(document).on('click', 'a[href$="#apply-pe"]', function() {
+		$(".bitly").html('<i>Generating short link...</i>');
+		showDialog('#apply-pe');
+		var url = skin;
+		var username="corbindavenport";
+		var key="R_fc9079f048624ceda44a6e6c798db6a4";
+		$.ajax({
+		url:"http://api.bit.ly/v3/shorten",
+		data:{longUrl:url,apiKey:key,login:username},
+		dataType:"jsonp",
+		success:function(v)
+		{
+			var bit_url=v.data.url;
+			$(".bitly").html('<a href="'+bit_url+'" target="_blank">'+bit_url+'</a>');
+		}
+		});
+	});
+
+	$(document).on('click', 'a[href$="#help"]', function() {
+		showDialog('#help');
+	});
+
+	var skin = "";
+
+	</script>
+</head>
+<body>
+
+<div data-role="dialog" id="username" class="dialog" data-windows-style="true" style="padding: 20px !important;">
+	<div class="container">
+		<label>Type in a Minecraft username to open it's skin:</label>
+		<div class="input-control text full-size">
+			<input type="text" id="username-text" placeholder="Minecraft username">
+		</div>
+		<div class="buttoncontainer"><button class="button" id="cancel">Cancel</button><button class="button" id="username-confirm">OK</button></div>
+	</div>
+</div>
+
+<div data-role="dialog" id="url" class="dialog" data-windows-style="true" style="padding: 20px !important;">
+	<div class="container">
+		<label>Type in the full web address to a skin image:</label>
+		<div class="input-control text full-size">
+			<input type="text" id="url-text" placeholder="http://www.website.com/skin.png">
+		</div>
+		<div class="buttoncontainer"><button class="button" id="cancel">Cancel</button><button class="button" id="url-confirm">OK</button></div>
+	</div>
+</div>
+
+<div data-role="dialog" id="apply-pe" class="dialog" data-close-button="true" data-windows-style="true" style="padding: 20px !important;">
+	<div class="container">
+		<p>Type in the web address below on your mobile device with Minecraft Pocket Edition:</p>
+		<p class="bitly">Open a skin first!</p>
+		<p>Then on your device, hold down on the image and select 'Save Image'.</p>
+	</div>
+	<span class="dialog-close-button"></span>
+</div>
+
+<div data-role="dialog" id="help" class="dialog" data-close-button="true" data-windows-style="true" style="padding: 20px !important;">
+	<div class="container">
+		<p>Skin Manager (formally known as 'Skin Finder') is a tool for easy management of Minecraft skins.</p>
+		<p>You can open a skin from an external link (for example, a direct link to the skin image), or from a Minecraft user. This shows the skin file in the main viewer.</p>
+		<p>Skin Manager is licensed under the GPLv3 License, and it's code is available on GitHub. If you find Skin Manager useful, please consider donating!</p>
+		<div class="buttoncontainer"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=4SZVSMJKDS35J&lc=US&item_name=Skin%20Manager%20Donation&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank" class="button">Donate</a><a href="https://github.com/corbindavenport/skin-manager" target="_blank" class="button">GitHub</a></div>
+	</div>
+	<span class="dialog-close-button"></span>
+</div>
+
+<div class="app-bar fixed-top" data-role="appbar">
+	<a class="app-bar-element branding">Skin Manager</a>
+	<ul class="app-bar-menu">
+		<li data-flexorderorigin="1" data-flexorder="2" class="">
+			<a href="" class="dropdown-toggle">Open</a>
+			<ul class="d-menu" data-role="dropdown" style="display: none;">
+				<li><a href="#username">Open from username</a></li>
+				<li><a href="#url">Open from URL</a></li>
+			</ul>
+		</li>
+		<li data-flexorderorigin="1" data-flexorder="2" class="">
+			<a href="" class="dropdown-toggle">Save</a>
+			<ul class="d-menu" data-role="dropdown" style="display: none;">
+				<li><a class="save" href="#" target="_blank" download>Save to device</a></li>
+				<li><a class="apply-account" href="#" target="_blank">Apply to Minecraft PC</a></li>
+				<li><a href="#apply-pe">Apply to Minecraft PE</a></li>
+			</ul>
+		</li>
+		<li data-flexorderorigin="3" data-flexorder="4"><a href="#help">Help</a></li>
+	</ul>
+<div class="app-bar-pullbutton automatic" style="display: none;"></div><div class="clearfix" style="width: 0;"></div><nav class="app-bar-pullmenu hidden flexstyle-app-bar-menu" style="display: none;"><ul class="app-bar-pullmenubar hidden app-bar-menu"></ul></nav>
+</div>
+
+<div id="content"></div>
+
+</body>
+</html>	

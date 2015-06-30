@@ -8,9 +8,16 @@ Skin Manager is designed to be embedded on other sites. To embed Skin Manager, p
 <iframe src="http://corbindavenport.github.io/skin-manager" style="width: 100%; height: 470px; border: 0px;"></iframe>
 ```
 
-Skin Manager uses [Metro UI CSS 3.0](http://metroui.org.ua).
+
+Skin Manager uses [Metro UI CSS 3.0](http://metroui.org.ua), the [Bit.ly API](http://dev.bitly.com), and the [QR Server API](http://goqr.me/api/).
 
 ---------------------------------------------------------
+__New in Skin Manager 2.0:__
+* New 3D skin viewer, powered by Nova Skin
+* Improved 'Save to Minecraft PE' dialog
+* Improved error handling
+* Cleaned up code
+
 __New in Skin Manager 1.0:__
 * Initial Release
 

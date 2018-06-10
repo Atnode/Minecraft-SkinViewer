@@ -416,7 +416,7 @@ function loadSkin(i, c, j, g, b) {
 
 function yqlGetImageData(url, success, error, extra) {
   $.ajax({
-     url: 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20data.uri%20where%20url%3D%40url',
+     url: 'https://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20data.uri%20where%20url%3D%40url',
      data: {
        url: url
      },
@@ -450,7 +450,7 @@ function yqlGetImageData(url, success, error, extra) {
 
 
 function loadUserSkin(b, d, c, a) {
-    loadSkin("http://s3.amazonaws.com/MinecraftSkins/" + b + ".png", false, d, c, a)
+    loadSkin("https://s3.amazonaws.com/MinecraftSkins/" + b + ".png", false, d, c, a)
 }
 function loadSkinUrl(c) {
     var g = $(c.split("+"));
@@ -471,7 +471,7 @@ function loadSkinUrl(c) {
         }
     }
     function a(h) {
-        if (!g[h].match(/http/)) {
+        if (!g[h].match(/https/)) {
             loadUserSkin(g[h], f, b, true)
         } else {
             loadSkin(g[h], h > 0, f, b, true)

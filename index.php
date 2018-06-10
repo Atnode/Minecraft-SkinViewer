@@ -4,8 +4,10 @@
    	$lc = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
    if($lc == "fr"){
    	$lang = "fr";
+	$description = "Une visionneuse de skins Minecraft.";
    } else if($lc == "en"){
    	$lang = "en";
+	$description = "A Minecraft skins viewer.";
    }
    else{
    	$lang = "en";
@@ -17,6 +19,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="<?php echo $description; ?>"/>
+	<meta property="og:title" content="Minecraft SkinViewer"/>
+	<meta property="og:description" content="<?php echo $description; ?>"/>
+	<meta property="og:image" content="img/logo.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Minecraft SkinViewer</title>
     <link rel="icon" type="image/png" href="img/logo.png" />
@@ -73,7 +79,7 @@
             <p data-i18n="modal4-2"></p>
             <p data-i18n="modal4-3"></p>
             <p data-i18n="modal4-4"></p>
-            <p>Version 1.2.0</p>
+            <p>Version 1.2.1</p>
             <div class="buttoncontainer"><a href="https://framagit.org/Atnode/Minecraft-SkinViewer" target="_blank" class="button" style="margin-right: 10px;" data-i18n="modal4-5"></a></div>
         </div>
         <span class="dialog-close-button"></span>

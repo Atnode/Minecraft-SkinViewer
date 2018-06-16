@@ -1,0 +1,166 @@
+body {
+    overflow: hidden
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: 14px;
+    font-family: Times New Roman,serif;
+    font-style: normal;
+    font-variant: normal;
+    text-decoration: none;
+	animation: fadein 1s
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(../fonts/Roboto-Regular.woff2) format('woff2');
+}
+
+#coord {
+    background: 0
+}
+
+canvas {
+    cursor: move!important;
+}
+
+#display {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.hidebuttons a, .hidebuttons div {
+    visibility: hidden;
+}
+
+canvas {
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+#display {
+    position: absolute;
+    z-index: 0
+}
+
+#skinMap,#display {
+    cursor: crosshair;
+    border: 1px black
+}
+
+#skin {
+    opacity: .95
+}
+
+#skinMap,.expandedLayer {
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+a,body {
+    color: white
+}
+
+.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both
+}
+
+#colorPickers,#options,#coord,#colorRotator,.cover {
+    text-align: center
+}
+
+#coord {
+    font-size: 20px;
+    color: white;
+    text-shadow: cyan 0 0 2px;
+    padding-left: 36px
+}
+
+#coord div {
+    padding-left: 6px;
+    padding-right: 6px;
+    display: inline
+}
+
+#zoomin,#zoomout,#rotateleft,#rotateright,#undo,#lighter,#darker,#erasehat,#flip-bottom-faces {
+    cursor: pointer
+}
+
+#toolbar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 0;
+    background-color: #3c3f41;
+    height: 4px;
+}
+
+#toolbar,#logo {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease
+}
+
+#all:hover #toolbar {
+    height: 38px
+}
+
+#top a,.button {
+    color: white;
+    font-weight: bold;
+    text-shadow: -1px -1px 1px #420;
+    cursor: pointer
+}
+
+#top a:hover,.button:hover {
+    text-shadow: 0 0 3px yellow
+}
+
+#showSkin {
+    display: none;
+    position: absolute;
+    right: 8px;
+    top: 36px;
+    border: solid 1px white;
+    outline: solid 1px black;
+    z-index: 10002
+}
+
+#skinMap {
+    z-index: 11;
+    background: none!important
+}
+
+#position {
+    background-color: black;
+    color: white;
+    border: 0;
+    outline: black;
+	font-family: 'Roboto', sans-serif
+}

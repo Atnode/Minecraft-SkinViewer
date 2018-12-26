@@ -25,8 +25,8 @@ jQuery(document).ready(function() {
             'modal3-2': 'Or scan the QR code, on your mobile device with Minecraft Pocket Edition.',
             'modal4-1': 'Minecraft SkinViewer is a Minecraft skins viewer.',
             'modal4-2': 'You can open a skin from an external link (for example, a direct link to the skin image), or from a Minecraft user.',
-            'modal4-3': 'Minecraft SkinViewer is a fork of an open source project under the GNU GPLv3 license, named "Skin Manager", available on GitHub and developed by Corbin Davenport.',
-            'modal4-4': 'Minecraft SkinViewer is developed by Atnode.',
+            'modal4-3': 'This tool also offers you the possibility to download the displayed skin, apply it to Minecraft.net or apply it to Minecraft Pocket Edition using a QR Code or a web address.',
+            'modal4-4': 'Minecraft SkinViewer is a project originally developed by Corbin Davenport and now maintained by Atnode.',
             'modal4-5': 'View the Minecraft SkinViewer Git Repository',
 
             'js1': 'Skin loaded!',
@@ -74,8 +74,8 @@ jQuery(document).ready(function() {
             'modal3-2': 'Ou scannez le QR code sur votre appareil mobile avec Minecraft Pocket Edition.',
             'modal4-1': 'Minecraft SkinViewer est une visionneuse de skins Minecraft.',
             'modal4-2': 'Vous pouvez ouvrir un skin à partir d’une adresse web (par exemple, un lien direct vers l’image d’un skin) ou à partir d’un pseudo d’utilisateur de Minecraft.',
-            'modal4-3': 'Minecraft SkinViewer est un fork d’un projet open source sous la licence GNU GPLv3, nommé "Skin Manager", disponible sur GitHub et développé par Corbin Davenport.',
-            'modal4-4': 'Minecraft SkinViewer est développé par Atnode.',
+            'modal4-3': 'Cet outil vous offre également la possibilité de télécharger le skin affiché, de l’appliquer à Minecraft.net ou de l’appliquer à Minecraft Pocket Edition en utilisant un QR Code ou une adresse web.',
+            'modal4-4': 'Minecraft SkinViewer est un projet initialement développé par Corbin Davenport et désormais maintenu par Atnode.',
             'modal4-5': 'Voir le dépôt Git de Minecraft SkinViewer',
 
             'js1': 'Chargement du skin réussi !',

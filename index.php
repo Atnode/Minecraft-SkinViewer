@@ -79,8 +79,8 @@
             <p data-i18n="modal4-2"></p>
             <p data-i18n="modal4-3"></p>
             <p data-i18n="modal4-4"></p>
-            <p>Version 1.2.1</p>
-            <div class="buttoncontainer"><a href="https://framagit.org/Atnode/Minecraft-SkinViewer" target="_blank" class="button" style="margin-right: 10px;" data-i18n="modal4-5"></a></div>
+            <p>Version 3.2.2</p>
+            <div class="buttoncontainer"><a href="https://github.org/Atnode/Minecraft-SkinViewer" target="_blank" class="button" style="margin-right: 10px;" data-i18n="modal4-5"></a></div>
         </div>
         <span class="dialog-close-button"></span>
     </div>

@@ -14,7 +14,7 @@ function open() {
     var img = new Image();
     img.onload = function() {
         $(".save").attr("href", "libs/download/index.php?filename=" + skin + ".png")
-        $(".apply-account").attr("href", "https://minecraft.net/profile/skin/remote?url=" + skin).attr("target", "_blank");
+        $(".apply-account").attr("href", "https://my.minecraft.net/profile/skin/remote?url=" + skin).attr("target", "_blank");
         if ($("#iframe")) {
             $("#iframe").remove();
         }

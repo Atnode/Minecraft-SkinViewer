@@ -47,67 +47,77 @@
 </head>
 
 <body>
-    <div data-role="dialog" id="username" class="dialog" data-close-button="true" data-windows-style="true" style="padding: 20px !important;">
-        <div class="container">
-            <label data-i18n="modal1"></label>
-            <div class="input-control text full-size">
-                <input type="text" id="username-text" placeholder="Jeb_">
+    <div class="jswarning">
+		<h1>We are sorry, yet Minecraft SkinViewer needs JavaScript support to work.</h1>
+		<p>Nous sommes désolé, mais Minecraft SkinViewer a besoin que le support de JavaScript soit activé pour fonctionner.</p>
+	</div>
+    <div class="main">
+        <div data-role="dialog" id="username" class="dialog" data-close-button="true" data-windows-style="true" style="padding: 20px !important;">
+            <div class="container">
+                <label data-i18n="modal1"></label>
+                <div class="input-control text full-size">
+                    <input type="text" id="username-text" placeholder="Jeb_">
+                </div>
+                <div class="buttoncontainer"><button class="button" id="cancel" data-i18n="cancel"><button class="button" id="username-confirm" data-i18n="ok"></button></button></div>
             </div>
-            <div class="buttoncontainer"><button class="button" id="username-confirm" data-i18n="ok"></button><button class="button" id="cancel" data-i18n="cancel"></button></div>
         </div>
-    </div>
-    <div data-role="dialog" id="url" class="dialog" data-close-button="true" data-windows-style="true" style="padding: 20px !important;">
-        <div class="container">
-            <label data-i18n="modal2"></label>
-            <div class="input-control text full-size">
-                <input type="text" id="url-text" placeholder="http://www.exemple.com/skin.png">
+        <div data-role="dialog" id="url" class="dialog" data-close-button="true" data-windows-style="true" style="padding: 20px !important;">
+            <div class="container">
+                <label data-i18n="modal2"></label>
+                <div class="input-control text full-size">
+                    <input type="text" id="url-text" placeholder="http://www.exemple.com/skin.png">
+                </div>
+                <div class="buttoncontainer"><button class="button" id="cancel" data-i18n="cancel"></button><button class="button" id="url-confirm" data-i18n="ok"></button></div>
             </div>
-            <div class="buttoncontainer"><button class="button" id="url-confirm" data-i18n="ok"></button><button class="button" id="cancel" data-i18n="cancel"></button></div>
         </div>
-    </div>
-    <div data-role="dialog" id="apply-pe" class="dialog" data-close-button="true" data-windows-style="true" style="padding: 20px !important;">
-        <div class="container">
-            <p data-i18n="modal3-1"></p>
-            <p class="bitly"></p>
-            <p data-i18n="modal3-2"></p>
+        <div data-role="dialog" id="apply-pe" class="dialog" data-close-button="true" data-windows-style="true" style="padding: 20px !important;">
+            <div class="container">
+                <p data-i18n="modal3-1"></p>
+                <p class="bitly"></p>
+                <p data-i18n="modal3-2"></p>
+            </div>
+            <span class="dialog-close-button"></span>
         </div>
-        <span class="dialog-close-button"></span>
-    </div>
-    <div data-role="dialog" id="help" class="dialog" data-close-button="true" data-windows-style="true" style="padding: 20px !important;">
-        <div class="container">
-            <p data-i18n="modal4-1"></p>
-            <p data-i18n="modal4-2"></p>
-            <p data-i18n="modal4-3"></p>
-            <p data-i18n="modal4-4"></p>
-            <p>Version 3.2.2</p>
-            <div class="buttoncontainer"><a href="https://github.org/Atnode/Minecraft-SkinViewer" target="_blank" class="button" style="margin-right: 10px;" data-i18n="modal4-5"></a></div>
+        <div data-role="dialog" id="help" class="dialog" data-close-button="true" data-windows-style="true" style="padding: 20px !important;">
+            <div class="container">
+                <p data-i18n="modal4-1"></p>
+                <p data-i18n="modal4-2"></p>
+                <p data-i18n="modal4-3"></p>
+                <p data-i18n="modal4-4"></p>
+                <p>Version 3.2.3</p>
+                <div class="buttoncontainer"><a href="https://github.com/Atnode/Minecraft-SkinViewer" target="_blank" class="button" style="margin-right: 10px;" data-i18n="modal4-5"></a></div>
+            </div>
+            <span class="dialog-close-button"></span>
         </div>
-        <span class="dialog-close-button"></span>
+        <div class="app-bar fixed-top darcula" data-role="appbar">
+            <span class="app-bar-divider"></span>
+            <a class="app-bar-element branding"><img src="img/logo.png" style="height: 28px; display: inline-block; margin-right: 10px;">Minecraft SkinViewer</a>
+            <span class="app-bar-divider"></span>
+            <ul class="app-bar-menu">
+                <li data-flexorderorigin="1" data-flexorder="2" class="">
+                    <a href="" class="dropdown-toggle" data-i18n="menu1"></a>
+                    <ul class="d-menu" data-role="dropdown" style="display: none;">
+                        <li><a href="#username" data-i18n="username"></a></li>
+                        <li><a href="#url" data-i18n="url"></a></li>
+                    </ul>
+                </li>
+                <li data-flexorderorigin="1" data-flexorder="2" class="">
+                    <a href="" class="dropdown-toggle" data-i18n="menu2"></a>
+                    <ul class="d-menu" data-role="dropdown" style="display: none;">
+                        <li><a class="save" href="#save" target="_blank" data-i18n="png" download></a></li>
+                        <li><a class="apply-account" href="#apply-account" target="" data-i18n="net"></a></li>
+                        <li><a href="#apply-pe" data-i18n="pe"></a></li>
+                    </ul>
+                </li>
+                <li data-flexorderorigin="3" data-flexorder="4"><a href="#help" data-i18n="about"></a></li>
+            </ul>
+            <span class="app-bar-divider"></span>
+        </div>
+        <div id="content"></div>
     </div>
-    <div class="app-bar fixed-top darcula" data-role="appbar">
-        <span class="app-bar-divider"></span>
-        <a class="app-bar-element branding"><img src="img/logo.png" style="height: 28px; display: inline-block; margin-right: 10px;">Minecraft SkinViewer</a>
-        <span class="app-bar-divider"></span>
-        <ul class="app-bar-menu">
-            <li data-flexorderorigin="1" data-flexorder="2" class="">
-                <a href="" class="dropdown-toggle" data-i18n="menu1"></a>
-                <ul class="d-menu" data-role="dropdown" style="display: none;">
-                    <li><a href="#username" data-i18n="username"></a></li>
-                    <li><a href="#url" data-i18n="url"></a></li>
-                </ul>
-            </li>
-            <li data-flexorderorigin="1" data-flexorder="2" class="">
-                <a href="" class="dropdown-toggle" data-i18n="menu2"></a>
-                <ul class="d-menu" data-role="dropdown" style="display: none;">
-                    <li><a class="save" href="#save" target="_blank" data-i18n="png" download></a></li>
-                    <li><a class="apply-account" href="#apply-account" target="" data-i18n="net"></a></li>
-                    <li><a href="#apply-pe" data-i18n="pe"></a></li>
-                </ul>
-            </li>
-            <li data-flexorderorigin="3" data-flexorder="4"><a href="#help" data-i18n="about"></a></li>
-        </ul>
-        <span class="app-bar-divider"></span>
-    </div>
-    <div id="content"></div>
 </body>
+<script>
+    $('div.jswarning').css('display','none');
+    $('div.main').css('visibility','visible');
+</script>
 </html>

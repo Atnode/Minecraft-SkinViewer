@@ -11,6 +11,7 @@ body {
 	font-size: 18px;
 	min-height: 450px !important;
 	animation: fadein 1s;
+	height: auto;
 }
 
 @keyframes fadein {
@@ -87,4 +88,12 @@ iframe {
 	border: 0;
 	height: 100%;
 	width: 100%;
+}
+
+.main {
+	visibility: hidden;
+}
+
+.jswarning {
+	color: white;
 }

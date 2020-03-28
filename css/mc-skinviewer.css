@@ -97,3 +97,7 @@ iframe {
 .jswarning {
 	color: white;
 }
+
+.app-bar .app-bar-element.branding:hover, .app-bar .app-bar-element.branding:active {
+	background-color: #3c3f41;
+}

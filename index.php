@@ -15,7 +15,7 @@
 ?>
 <!DOCTYPE html>
 <html>
-<?php if($lang == "en"){echo "<html lang='en'>";} else {echo "<html lang='fr'>";} ?>
+<?php echo "<html lang='$lang'>"; ?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,7 +43,7 @@
     <script src="libs/i18n/jquery.i18n.emitter.bidi.js"></script>
     <script src="libs/i18n/main-jquery_i18n.js"></script>
     <script src="js/mc-skinviewer.js"></script>
-	<?php if($lang == "fr"){echo "<script>$.i18n({locale: 'fr'})</script>";} else {echo "<script>$.i18n({locale: 'en'})</script>";} ?>
+	<?php echo "<script>$.i18n({locale: '$lang'})</script>"; ?>
 </head>
 
 <body>
@@ -101,7 +101,7 @@
                         <li><a href="#url" data-i18n="url"></a></li>
                     </ul>
                 </li>
-                <li data-flexorderorigin="1" data-flexorder="2" class="">
+                <li data-flexorderorigin="2" data-flexorder="3" class="">
                     <a href="" class="dropdown-toggle" data-i18n="menu2"></a>
                     <ul class="d-menu" data-role="dropdown" style="display: none;">
                         <li><a class="save" href="#save" target="_blank" data-i18n="png" download></a></li>
@@ -111,7 +111,6 @@
                 </li>
                 <li data-flexorderorigin="3" data-flexorder="4"><a href="#help" data-i18n="about"></a></li>
             </ul>
-            <span class="app-bar-divider"></span>
         </div>
         <div id="content"></div>
     </div>

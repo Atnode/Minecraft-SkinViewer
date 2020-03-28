@@ -26,7 +26,7 @@
     control.enableRotate = true;
     control.enableZoom = true;
     control.enablePan = true;
-    skinViewer.camera.position.z = 80
+    skinViewer.camera.position.z = 90
     skinViewer.animations.speed = 0.7;
 
     $(window).bind('resize', function(e) {

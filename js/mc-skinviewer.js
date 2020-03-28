@@ -18,8 +18,8 @@ function open() {
         if ($("#iframe")) {
             $("#iframe").remove();
         }
-        $("#content").html('<iframe src="libs/skin/index.php?url=' + skin + '" id="iframe" frameborder="0" allowtransparency="true"></iframe>');
-        if (this.width == 64 && this.height == 64) {
+        $("#content").html('<iframe src="libs/3dskin/index.php?url=' + skin + '" id="iframe" frameborder="0" allowtransparency="true"></iframe>');
+        if (this.width == this.height || this.width == 2*this.height) {
             if (username == true) {
                 $.Notify({
                     caption: $.i18n('js1'),

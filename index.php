@@ -90,7 +90,7 @@
             </div>
             <span class="dialog-close-button"></span>
         </div>
-        <div class="app-bar fixed-top darcula" data-role="appbar">
+        <div class="app-bar fixed-top darcula gradient" data-role="appbar">
             <a class="app-bar-element branding"><img src="img/logo.png" style="height: 28px; display: inline-block; margin-right: 10px;">Minecraft SkinViewer <?php echo substr($ver,0,3); ?></a>
             <span class="app-bar-divider"></span>
             <ul class="app-bar-menu">

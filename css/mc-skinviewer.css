@@ -98,6 +98,34 @@ iframe {
 	color: white;
 }
 
-.app-bar .app-bar-element.branding:hover, .app-bar .app-bar-element.branding:active {
-	background-color: #3c3f41;
+.gradient {
+	background: linear-gradient(120deg, #3c3f41, #6e6e6e);
+}
+
+.app-bar .app-bar-element {
+	background-color: transparent;
+}
+
+.app-bar .app-bar-pullbutton {
+	background-color: transparent;
+}
+
+.app-bar .app-bar-menu > li, .app-bar .app-bar-menu > li > a {
+	transition: background-color .10s ease-in-out;
+}
+
+.app-bar.darcula .app-bar-element:active, .app-bar.darcula .app-bar-element:hover, .app-bar.darcula .app-bar-menu > li:active, .app-bar.darcula .app-bar-menu > li:hover, .app-bar.darcula .app-bar-menu > li > a:active, .app-bar.darcula .app-bar-menu > li > a:hover {
+	background-color: #333333;
+}
+
+.app-bar.darcula .app-bar-element .d-menu li:not(.disabled) > a, .app-bar.darcula .app-bar-element .d-menu li > a, .app-bar.darcula .app-bar-menu > li .d-menu li:not(.disabled) > a, .app-bar.darcula .app-bar-menu > li .d-menu li > a {
+	transition: background-color .10s ease-in-out;
+}
+
+.app-bar.darcula .app-bar-element .d-menu li:not(.disabled) > a:hover, .app-bar.darcula .app-bar-element .d-menu li > a:hover, .app-bar.darcula .app-bar-menu > li .d-menu li:not(.disabled) > a:hover, .app-bar.darcula .app-bar-menu > li .d-menu li > a:hover {
+	background-color: #333333;
+}
+
+a.button, a.cycle-button, a.round-button, a.square-button, div.button, div.cycle-button, div.round-button, div.square-button, span.button, span.cycle-button, span.round-button, span.square-button {
+	transition: border .10s ease-in-out;
 }

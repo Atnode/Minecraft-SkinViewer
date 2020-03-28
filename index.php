@@ -27,13 +27,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Minecraft SkinViewer</title>
     <link rel="icon" type="image/png" href="img/logo.png" />
-    <link href="libs/metrocss/metro.min.css" rel="stylesheet">
-    <link href="libs/metrocss//metro-icons.min.css" rel="stylesheet">
-    <link href="libs/metrocss/metro-responsive.min.css" rel="stylesheet">
-    <link href="libs/metrocss/metro-schemes.min.css" rel="stylesheet">
+    <link href="libs/metro/css/metro.min.css" rel="stylesheet">
+    <link href="libs/metro/css/metro-icons.min.css" rel="stylesheet">
+    <link href="libs/metro/css/metro-responsive.min.css" rel="stylesheet">
+    <link href="libs/metro/css/metro-schemes.min.css" rel="stylesheet">
     <link href="css/mc-skinviewer.css" rel="stylesheet">
     <script src="libs/jquery/jquery.min.js"></script>
-    <script src="libs/metrocss/metro.min.js"></script>
+    <script src="libs/metro/js/metro.min.js"></script>
     <script src="libs/i18n/CLDRPluralRuleParser.js"></script>
     <script src="libs/i18n/jquery.i18n.js"></script>
     <script src="libs/i18n/jquery.i18n.messagestore.js"></script>

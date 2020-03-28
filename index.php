@@ -1,4 +1,5 @@
 <?php
+   $ver = "3.3.0-dev";
    $lc = ""; 
    if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
    	$lc = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
@@ -84,7 +85,7 @@
                 <p data-i18n="modal4-2"></p>
                 <p data-i18n="modal4-3"></p>
                 <p data-i18n="modal4-4"></p>
-                <p>Version 3.2.3</p>
+                <p>Version <?php echo $ver; ?></p>
                 <div class="buttoncontainer"><a href="https://github.com/Atnode/Minecraft-SkinViewer" target="_blank" class="button" style="margin-right: 10px;" data-i18n="modal4-5"></a></div>
             </div>
             <span class="dialog-close-button"></span>

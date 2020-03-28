@@ -25,7 +25,7 @@
 	<meta property="og:description" content="<?php echo $description; ?>"/>
 	<meta property="og:image" content="img/logo.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Minecraft SkinViewer</title>
+    <title>Minecraft SkinViewer <?php echo substr($ver,0,3); ?></title>
     <link rel="icon" type="image/png" href="img/logo.png" />
     <link href="libs/metro/css/metro.min.css" rel="stylesheet">
     <link href="libs/metro/css/metro-icons.min.css" rel="stylesheet">
@@ -91,8 +91,7 @@
             <span class="dialog-close-button"></span>
         </div>
         <div class="app-bar fixed-top darcula" data-role="appbar">
-            <span class="app-bar-divider"></span>
-            <a class="app-bar-element branding"><img src="img/logo.png" style="height: 28px; display: inline-block; margin-right: 10px;">Minecraft SkinViewer</a>
+            <a class="app-bar-element branding"><img src="img/logo.png" style="height: 28px; display: inline-block; margin-right: 10px;">Minecraft SkinViewer <?php echo substr($ver,0,3); ?></a>
             <span class="app-bar-divider"></span>
             <ul class="app-bar-menu">
                 <li data-flexorderorigin="1" data-flexorder="2" class="">

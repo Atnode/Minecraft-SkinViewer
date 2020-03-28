@@ -1,18 +1,25 @@
-body {
-    overflow: hidden
-}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url(../fonts/Roboto-Regular.woff2) format('woff2');
+  }
 
-html,body {
+body {
     width: 100%;
     height: 100%;
     margin: 0;
     font-size: 14px;
-    font-family: Times New Roman,serif;
+    font-family: "Roboto", serif;
     font-style: normal;
     font-variant: normal;
     text-decoration: none;
-	animation: fadein 1s
+    animation: fadein 1s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    overflow: hidden
 }
+
 
 @keyframes fadein {
     from {
@@ -23,9 +30,20 @@ html,body {
     }
 }
 
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url(../fonts/Roboto-Regular.woff2) format('woff2');
+canvas {
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+    cursor: move!important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    
 }

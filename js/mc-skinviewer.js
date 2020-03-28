@@ -18,7 +18,7 @@ function open() {
         if ($("#iframe")) {
             $("#iframe").remove();
         }
-        $("#content").html('<iframe src="libs/skin/index.php#' + skin + '" id="iframe" frameborder="0" allowtransparency="true"></iframe>');
+        $("#content").html('<iframe src="libs/skin/index.php?url=' + skin + '" id="iframe" frameborder="0" allowtransparency="true"></iframe>');
         if (this.width == 64 && this.height == 64) {
             if (username == true) {
                 $.Notify({

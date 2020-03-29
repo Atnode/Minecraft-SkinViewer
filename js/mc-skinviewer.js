@@ -32,8 +32,7 @@ function open() {
                     caption: $.i18n('warning'),
                     content: $.i18n('js2'),
                     type: 'warning',
-                    icon: "<span class='mif-warning'></span>",
-                    keepOpen: true
+                    icon: "<span class='mif-warning'></span>"
                 });
             }
         } else if (this.width == 64 && this.height == 32) {
@@ -42,16 +41,14 @@ function open() {
                     caption: $.i18n('warning'),
                     content: $.i18n('js3'),
                     type: 'warning',
-                    icon: "<span class='mif-warning'></span>",
-                    keepOpen: true
+                    icon: "<span class='mif-warning'></span>"
                 });
             } else {
                 $.Notify({
                     caption: $.i18n('warning'),
                     content: $.i18n('js4'),
                     type: 'warning',
-                    icon: "<span class='mif-warning'></span>",
-                    keepOpen: true
+                    icon: "<span class='mif-warning'></span>"
                 });
             }
         } else {
@@ -59,8 +56,7 @@ function open() {
                 caption: $.i18n('hum'),
                 content: $.i18n('js5'),
                 type: 'alert',
-                icon: "<span class='mif-warning'></span>",
-                keepOpen: true
+                icon: "<span class='mif-warning'></span>"
             });
         }
     }

@@ -1,9 +1,4 @@
 {
-    "@metadata": {
-      "authors": [
-        "Alex"
-      ]
-    },
     "menu1": "Open a skin...",
     "username": "from an username",
     "url": "from an URL",
@@ -21,8 +16,9 @@
     "modal4-1": "Minecraft SkinViewer is a Minecraft skins viewer.",
     "modal4-2": "You can open a skin from an external link (for example, a direct link to the skin image), or from a Minecraft user.",
     "modal4-3": "This tool also offers you the ability to download the displayed skin, apply it to Minecraft.net or apply it to Minecraft Pocket Edition by downloading it via a QR Code or a web address.",
-    "modal4-4": "Minecraft SkinViewer is a project originally developed by Corbin Davenport and now maintained by Atnode.",
-    "modal4-5": "View the Minecraft SkinViewer Git Repository",
+    "modal4-4": "This tool uses the following open source libraries:",
+    "modal4-5": "This tool also uses:",
+    "modal4-6": "View the Minecraft SkinViewer Git Repository",
     "js1": "Skin loaded!",
     "warning": "Warning",
     "js2": "Minecraft SkinViewer cannot check if the skin is valid when opened from a URL.",

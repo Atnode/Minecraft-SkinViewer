@@ -79,12 +79,26 @@
         </div>
         <div data-role="dialog" id="help" class="dialog" data-close-button="true" data-windows-style="true" style="padding: 20px !important;">
             <div class="container">
-                <p data-i18n="modal4-1"></p>
-                <p data-i18n="modal4-2"></p>
-                <p data-i18n="modal4-3"></p>
-                <p data-i18n="modal4-4"></p>
+                <p data-i18n="modal4-1">Minecraft SkinViewer is a Minecraft skins viewer</p>
+                <p data-i18n="modal4-2">You can open a skin from an external link (for example, a direct link to the skin image), or from a Minecraft user.</p>
+                <p data-i18n="modal4-3">This tool also offers you the ability to download the displayed skin, apply it to Minecraft.net or apply it to Minecraft Pocket Edition by downloading it via a QR Code or a web address.</p>
+                <p data-i18n="modal4-4">This tool uses the following open source libraries:</p>
+                <ul>
+                    <li><a href="https://github.com/olton/Metro-UI-CSS-3" target="_blank">Metro UI CSS 3</a> - <a href="https://github.com/olton/Metro-UI-CSS-3/blob/master/LICENSE" target="_blank">MIT</a></li>
+                    <li><a href="https://github.com/jquery/jquery" target="_blank">jQuery</a> - <a href="https://github.com/jquery/jquery/blob/master/LICENSE.txt" target="_blank">MIT</a></li>
+                    <li><a href="https://github.com/wikimedia/jquery.i18n" target="_blank">jQuery.i18n</a> - <a href="https://github.com/wikimedia/jquery.i18n/blob/master/MIT-LICENSE" target="_blank">MIT</a></li>
+                    <li><a href="https://github.com/timovn/qrcode-url" target="_blank">QRCode-URL</a></li>
+                    <li><a href="https://github.com/santhoshtr/CLDRPluralRuleParser" target="_blank">CLDRPluralRuleParser</a> - <a href="https://github.com/santhoshtr/CLDRPluralRuleParser/blob/master/LICENSE.txt" target="_blank">MIT</a></li>
+                    <li><a href="https://github.com/bs-community/skinview3d" target="_blank">Skinview3d</a> - <a href="https://github.com/bs-community/skinview3d/blob/master/LICENSE" target="_blank">MIT</a></li>
+                </ul>
+                <p data-i18n="modal4-5">This tool also uses:</p>
+                <ul>
+                    <li><a href="https://fonts.google.com/specimen/Lato">Lato</a> - <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL">Open Font License</a></li>
+                    <li><a href="http://minotar.net/">Minotar</a></li>
+                    <li><a href="https://bitly.com/">Bitly</a></li>
+                </ul>
                 <p>Version <?php echo $ver; ?></p>
-                <div class="buttoncontainer"><a href="https://github.com/Atnode/Minecraft-SkinViewer" target="_blank" class="button" style="margin-right: 10px;" data-i18n="modal4-5"></a></div>
+                <div class="buttoncontainer"><a href="https://github.com/Atnode/Minecraft-SkinViewer" target="_blank" class="button" style="margin-right: 10px;" data-i18n="modal4-6"></a></div>
             </div>
             <span class="dialog-close-button"></span>
         </div>

@@ -13,19 +13,19 @@ Minecraft SkinViewer is licensed under [GNU GPLv3](license.txt).
 ## Credits
 This project use:  
 <ul>
-                    <li><a href="https://github.com/olton/Metro-UI-CSS-3" target="_blank">Metro UI CSS 3</a> - <a href="https://github.com/olton/Metro-UI-CSS-3/blob/master/LICENSE" target="_blank">MIT</a></li>
-                    <li><a href="https://github.com/jquery/jquery" target="_blank">jQuery</a> - <a href="https://github.com/jquery/jquery/blob/master/LICENSE.txt" target="_blank">MIT</a></li>
-                    <li><a href="https://github.com/wikimedia/jquery.i18n" target="_blank">jQuery.i18n</a> - <a href="https://github.com/wikimedia/jquery.i18n/blob/master/MIT-LICENSE" target="_blank">MIT</a></li>
-                    <li><a href="https://github.com/timovn/qrcode-url" target="_blank">QRCode-URL</a></li>
-                    <li><a href="https://github.com/santhoshtr/CLDRPluralRuleParser" target="_blank">CLDRPluralRuleParser</a> - <a href="https://github.com/santhoshtr/CLDRPluralRuleParser/blob/master/LICENSE.txt" target="_blank">MIT</a></li>
-                    <li><a href="https://github.com/bs-community/skinview3d" target="_blank">Skinview3d</a> - <a href="https://github.com/bs-community/skinview3d/blob/master/LICENSE" target="_blank">MIT</a></li>
-                </ul>
-                <p data-i18n="modal4-5">This tool also uses:</p>
-                <ul>
-                    <li><a href="https://fonts.google.com/specimen/Lato">Lato</a> - <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL">Open Font License</a></li>
-                    <li><a href="http://minotar.net/">Minotar</a></li>
-                    <li><a href="https://bitly.com/">Bitly</a></li>
-                </ul>
+<li><a href="https://github.com/olton/Metro-UI-CSS-3">Metro UI CSS 3</a> - <a href="https://github.com/olton/Metro-UI-CSS-3/blob/master/LICENSE">MIT</a></li>
+<li><a href="https://github.com/jquery/jquery">jQuery</a> - <a href="https://github.com/jquery/jquery/blob/master/LICENSE.txt">MIT</a></li>
+<li><a href="https://github.com/wikimedia/jquery.i18n">jQuery.i18n</a> - <a href="https://github.com/wikimedia/jquery.i18n/blob/master/MIT-LICENSE">MIT</a></li>
+<li><a href="https://github.com/timovn/qrcode-url">QRCode-URL</a></li>
+<li><a href="https://github.com/santhoshtr/CLDRPluralRuleParser">CLDRPluralRuleParser</a> - <a href="https://github.com/santhoshtr/CLDRPluralRuleParser/blob/master/LICENSE.txt">MIT</a></li>
+<li><a href="https://github.com/bs-community/skinview3d">Skinview3d</a> - <a href="https://github.com/bs-community/skinview3d/blob/master/LICENSE">MIT</a></li>
+</ul>
+<p data-i18n="modal4-5">This tool also uses:</p>
+<ul>
+<li><a href="https://fonts.google.com/specimen/Lato">Lato</a> - <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL">Open Font License</a></li>
+<li><a href="http://minotar.net/">Minotar</a></li>
+<li><a href="https://bitly.com/">Bitly</a></li>
+</ul>
 
 ***
 

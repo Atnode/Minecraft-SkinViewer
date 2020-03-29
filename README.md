@@ -1,17 +1,31 @@
 <div>
-  <h3 align="center"><img src="img/logo-small.png"/><br>A Minecraft skins viewer.</h3>
+  <h3 align="center"><img src="img/logo.png" width="100"/><br>Minecraft SkinViewer</h3>
 </div>
 
 ## Introduction
 Minecraft SkinViewer allows you to display a skin from a web address (for example, a direct link to a skin image) or from a Minecraft username.  
 This tool also offers you the possibility to download the displayed skin, apply it to Minecraft.net or apply it to Minecraft Pocket Edition using a QR Code or a web address.
 
-Minecraft SkinViewer is a project originally developed by [Corbin Davenport](https://corbin.io) and now maintained by [Atnode](https://atnode.fr).
-
-Minecraft SkinViewer is available in English and in French.  
 Minecraft SkinViewer is licensed under [GNU GPLv3](license.txt).
 
-**NOTE : Minecraft SkinViewer is not fully compatible with Alex-based skins (Minecraft 1.8+).**
+***
+
+## Credits
+This project use:  
+<ul>
+<li><a href="https://github.com/olton/Metro-UI-CSS-3">Metro UI CSS 3</a> - <a href="https://github.com/olton/Metro-UI-CSS-3/blob/master/LICENSE">MIT</a></li>
+<li><a href="https://github.com/jquery/jquery">jQuery</a> - <a href="https://github.com/jquery/jquery/blob/master/LICENSE.txt">MIT</a></li>
+<li><a href="https://github.com/wikimedia/jquery.i18n">jQuery.i18n</a> - <a href="https://github.com/wikimedia/jquery.i18n/blob/master/MIT-LICENSE">MIT</a></li>
+<li><a href="https://github.com/timovn/qrcode-url">QRCode-URL</a></li>
+<li><a href="https://github.com/santhoshtr/CLDRPluralRuleParser">CLDRPluralRuleParser</a> - <a href="https://github.com/santhoshtr/CLDRPluralRuleParser/blob/master/LICENSE.txt">MIT</a></li>
+<li><a href="https://github.com/bs-community/skinview3d">Skinview3d</a> - <a href="https://github.com/bs-community/skinview3d/blob/master/LICENSE">MIT</a></li>
+</ul>
+<p data-i18n="modal4-5">This tool also uses:</p>
+<ul>
+<li><a href="https://fonts.google.com/specimen/Lato">Lato</a> - <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL">Open Font License</a></li>
+<li><a href="http://minotar.net/">Minotar</a></li>
+<li><a href="https://bitly.com/">Bitly</a></li>
+</ul>
 
 ***
 

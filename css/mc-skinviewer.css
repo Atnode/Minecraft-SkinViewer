@@ -6,94 +6,185 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
 */
 
+@import url("lato.css");
 body {
-	background: #3c3f41;
-	font-size: 18px;
-	min-height: 450px !important;
-	animation: fadein 1s;
-	height: auto;
+  background: #3c3f41;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  min-height: 450px !important;
+  animation: fadein 1s;
+  height: auto;
 }
 
 @keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #content {
-	background-image: url(../img/background.png);
-	position: absolute;
-	left: 2px;
-	right: 2px;
-	top: 0px;
-	bottom: 2px;
+  background-image: url(../img/background.png);
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  top: 0px;
+  bottom: 2px;
 }
 
 .buttoncontainer {
-	float: right;
+  float: right;
 }
 
 .buttoncontainer button {
-	margin-left: 10px;
+  margin-left: 10px;
 }
 
 .linktable img {
-	width: 100px;
-	height: 100px;
+  width: 100px;
+  height: 100px;
 }
 
 .linktable a {
-	color: #1d1d1d !important;
+  color: #1d1d1d !important;
 }
 
-.linktable > tbody > tr:first-child > th:first-child {
-	width: 100px;
+.linktable>tbody>tr:first-child>th:first-child {
+  width: 100px;
 }
 
-.linktable > tbody > tr:first-child > th:nth-child(2) {
-	padding-left: 20px;
-	word-break: break-all;
-	width: calc(100% - 100px);
-	text-align: center !important;
+.linktable>tbody>tr:first-child>th:nth-child(2) {
+  padding-left: 20px;
+  word-break: break-all;
+  width: calc(100% - 100px);
+  text-align: center !important;
 }
 
 @media only screen and (max-width: 480px) {
-	.linktable > tbody > tr:first-child > th:nth-child(2) {
-		font-size: 1.5rem;
-	}
+  .linktable>tbody>tr:first-child>th:nth-child(2) {
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (min-width: 480px) {
-	.linktable > tbody > tr:first-child > th:nth-child(2) {
-		font-size: 2rem;
-	}
+  .linktable>tbody>tr:first-child>th:nth-child(2) {
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (min-width: 550px) {
-	.linktable > tbody > tr:first-child > th:nth-child(2) {
-		font-size: 2.7rem;
-	}
+  .linktable>tbody>tr:first-child>th:nth-child(2) {
+    font-size: 2.7rem;
+  }
 }
 
 .dropdown-toggle {
-	position: static;
+  position: static;
 }
 
 iframe {
-	position: absolute;
-	display: block;
-	border: 0;
-	height: 100%;
-	width: 100%;
+  position: absolute;
+  display: block;
+  border: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .main {
-	visibility: hidden;
+  visibility: hidden;
 }
 
 .jswarning {
-	color: white;
+  color: white;
+}
+
+.gradient {
+  background: linear-gradient(120deg, #3c3f41, #6e6e6e);
+}
+
+.app-bar .app-bar-element {
+  background-color: transparent;
+}
+
+.app-bar .app-bar-pullbutton {
+  background-color: transparent;
+}
+
+.app-bar .app-bar-menu>li,
+.app-bar .app-bar-menu>li>a {
+  transition: background-color .10s ease-in-out;
+}
+
+.app-bar.darcula .app-bar-element:active,
+.app-bar.darcula .app-bar-element:hover,
+.app-bar.darcula .app-bar-menu>li:active,
+.app-bar.darcula .app-bar-menu>li:hover,
+.app-bar.darcula .app-bar-menu>li>a:active,
+.app-bar.darcula .app-bar-menu>li>a:hover {
+  background-color: #333333;
+}
+
+.app-bar.darcula .app-bar-element .d-menu li:not(.disabled)>a,
+.app-bar.darcula .app-bar-element .d-menu li>a,
+.app-bar.darcula .app-bar-menu>li .d-menu li:not(.disabled)>a,
+.app-bar.darcula .app-bar-menu>li .d-menu li>a {
+  transition: background-color .10s ease-in-out;
+}
+
+.app-bar.darcula .app-bar-element .d-menu li:not(.disabled)>a:hover,
+.app-bar.darcula .app-bar-element .d-menu li>a:hover,
+.app-bar.darcula .app-bar-menu>li .d-menu li:not(.disabled)>a:hover,
+.app-bar.darcula .app-bar-menu>li .d-menu li>a:hover {
+  background-color: #333333;
+}
+
+.button,
+a.button,
+a.cycle-button,
+a.round-button,
+a.square-button,
+div.button,
+div.cycle-button,
+div.round-button,
+div.square-button,
+span.button,
+span.cycle-button,
+span.round-button,
+span.square-button {
+  transition: border .10s ease-in-out;
+}
+
+a.app-bar-element.branding:hover,
+a.app-bar-element.branding:active {
+  background-color: transparent !important;
+}
+
+.dropdown-toggle:focus {
+  outline: none;
+}
+
+.input-control input,
+.input-control select,
+.input-control textarea {
+  transition: border .10s ease-in-out;
+}
+
+.dialog .dialog-close-button:hover {
+  background-color: #33333354;
+  color: #ffffff;
+}
+
+.dialog .dialog-close-button {
+  transition: background-color .10s ease-in-out, color .10s ease-in-out;
+}
+
+li>a {
+  transition: color .10s ease-in;
+  color: #6e6e6e;
+}
+
+li>a:hover {
+  color: #333333;
 }

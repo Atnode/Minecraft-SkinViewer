@@ -15,8 +15,6 @@
     font-variant: normal;
     text-decoration: none;
     animation: fadein 1s;
-    -webkit-user-select: none;
-    -moz-user-select: none;
     overflow: hidden
   }
   
@@ -30,11 +28,6 @@
   }
   
   canvas {
-    image-rendering: optimizeSpeed;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: optimize-contrast;
-    -ms-interpolation-mode: nearest-neighbor;
     cursor: move!important;
     display: block;
     margin-left: auto;
@@ -49,7 +42,7 @@
   .btn {
     width: 70px;
     height: 70px;
-    background-color: #3c3f41;
+    background: linear-gradient(120deg, #3c3f41, #6e6e6e);
     border-radius: 50%;
     box-shadow: 0 6px 10px 0 #666;
     transition: all 0.1s ease-in-out;
@@ -60,6 +53,8 @@
     position: fixed;
     right: 50px;
     bottom: 50px;
+    text-decoration: none;
+    outline: none;
   }
   
   .btn:hover {

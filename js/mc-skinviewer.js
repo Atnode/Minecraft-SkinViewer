@@ -178,7 +178,7 @@ $(document).on('click', 'a[href$="#apply-pe"]', function() {
             dataType: "jsonp",
             success: function(v) {
                 var bit_url = v.data.url;
-                $(".bitly").html('<table class="linktable"><tr><th><img src="libs/qrcode/index.php?q=' + bit_url + '&l=L&b=1" /></th><th>' + bit_url + '</th></tr></table>');
+                $(".bitly").html('<table class="linktable"><tr><th><img src="libs/qrcode-url/index.php?q=' + bit_url + '&l=L&b=1" /></th><th>' + bit_url + '</th></tr></table>');
             },
             error: function(status_txt) {
                 $(".bitly").html('<span style="color: #DA4429"><b>Bit.ly API error:</b> ' + status_txt + '<br />Please try again later.</span>');

@@ -55,7 +55,7 @@
     <div class="main">
         <div data-role="dialog" id="username" class="dialog" data-close-button="true" data-windows-style="true" style="padding: 20px !important;">
             <div class="container">
-                <label data-i18n="modal1"></label>
+                <label data-i18n="modal1">Type in a Minecraft username to open it’s skin:</label>
                 <div class="input-control text full-size">
                     <input type="text" id="username-text" placeholder="Jeb_">
                 </div>
@@ -64,7 +64,7 @@
         </div>
         <div data-role="dialog" id="url" class="dialog" data-close-button="true" data-windows-style="true" style="padding: 20px !important;">
             <div class="container">
-                <label data-i18n="modal2"></label>
+                <label data-i18n="modal2">Type in the full web address to a skin image:</label>
                 <div class="input-control text full-size">
                     <input type="text" id="url-text" placeholder="http://www.exemple.com/skin.png">
                 </div>
@@ -73,9 +73,9 @@
         </div>
         <div data-role="dialog" id="apply-pe" class="dialog" data-close-button="true" data-windows-style="true" style="padding: 20px !important;">
             <div class="container">
-                <p data-i18n="modal3-1"></p>
+                <p data-i18n="modal3-1">Type the web address below:</p>
                 <p class="bitly"></p>
-                <p data-i18n="modal3-2"></p>
+                <p data-i18n="modal3-2">Or scan the QR code on your mobile device to download the skin faster.</p>
             </div>
             <span class="dialog-close-button"></span>
         </div>
@@ -95,21 +95,21 @@
             <span class="app-bar-divider"></span>
             <ul class="app-bar-menu">
                 <li data-flexorderorigin="1" data-flexorder="2" class="">
-                    <a href="" class="dropdown-toggle" data-i18n="menu1"></a>
+                    <a href="" class="dropdown-toggle" data-i18n="menu1">Open a skin...</a>
                     <ul class="d-menu" data-role="dropdown" style="display: none;">
-                        <li><a href="#username" data-i18n="username"></a></li>
-                        <li><a href="#url" data-i18n="url"></a></li>
+                        <li><a href="#username" data-i18n="username">from an username</a></li>
+                        <li><a href="#url" data-i18n="url">from an URL</a></li>
                     </ul>
                 </li>
                 <li data-flexorderorigin="2" data-flexorder="3" class="">
-                    <a href="" class="dropdown-toggle" data-i18n="menu2"></a>
+                    <a href="" class="dropdown-toggle" data-i18n="menu2">Save/apply a skin...</a>
                     <ul class="d-menu" data-role="dropdown" style="display: none;">
-                        <li><a class="save" href="#save" target="_blank" data-i18n="png" download></a></li>
-                        <li><a class="apply-account" href="#apply-account" target="" data-i18n="net"></a></li>
+                        <li><a class="save" href="#save" target="_blank" data-i18n="png" download>in .png format</a></li>
+                        <li><a class="apply-account" href="#apply-account" target="" data-i18n="net">on Minecraft.net</a></li>
                         <li><a href="#apply-pe" data-i18n="pe"></a></li>
                     </ul>
                 </li>
-                <li data-flexorderorigin="3" data-flexorder="4"><a href="#help" data-i18n="about"></a></li>
+                <li data-flexorderorigin="3" data-flexorder="4"><a href="#help" data-i18n="about">on Minecraft PE</a></li>
             </ul>
         </div>
         <div id="content"></div>

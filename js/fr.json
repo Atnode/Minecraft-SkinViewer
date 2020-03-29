@@ -1,9 +1,4 @@
 {
-    "@metadata": {
-      "authors": [
-        "Alex"
-      ]
-    },
     "menu1": "Ouvrir un skin...",
     "username": "à partir d’un pseudo",
     "url": "à partir d’une URL",
@@ -35,5 +30,13 @@
     "js7-2": "Les noms d’utilisateur Minecraft ne peuvent pas contenir d’espaces ou être vierges.",
     "js8-1": "URL invalide",
     "js8-2": "Les URLs ne peuvent pas contenir d’espaces ou être vierges.",
-    "js-skinfirst": "Vous devez ouvrir un skin en premier !"
+    "js-skinfirst": "Vous devez ouvrir un skin en premier !",
+    "default": "Défaut",
+    "nicetodraw": "Facile à dessiner",
+    "walk": "Marche",
+    "walk2": "Marche 2",
+    "hug": "Câlin",
+    "jump": "Saut",
+    "lookup": "Lever les yeux",
+    "random": "Aléatoire"
 }

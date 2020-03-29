@@ -7,18 +7,28 @@ You should have received a copy of the GNU General Public License along with thi
 */
 
 /*
+Translation
+*/
+
+$.i18n().load('lang/' + $.i18n().locale + '.json', $.i18n().locale).done(
+    function () {
+        $('body').i18n();
+    }
+);
+
+/*
 Main function
 */
 
 function open() {
     var img = new Image();
     img.onload = function() {
-        $(".save").attr("href", "libs/download/index.php?filename=" + skin + ".png")
+        $(".save").attr("href", "tools/download/index.php?filename=" + skin + ".png")
         $(".apply-account").attr("href", "https://my.minecraft.net/profile/skin/remote?url=" + skin).attr("target", "_blank");
         if ($("#iframe")) {
             $("#iframe").remove();
         }
-        $("#content").html('<iframe src="libs/3dskin/index.php?url=' + skin + '" id="iframe" frameborder="0" allowtransparency="true"></iframe>');
+        $("#content").html('<iframe src="tools/3dskinviewer/index.php?url=' + skin + '" id="iframe" frameborder="0" allowtransparency="true"></iframe>');
         if (this.width == this.height || this.width == 2*this.height) {
             if (username == true) {
                 $.Notify({

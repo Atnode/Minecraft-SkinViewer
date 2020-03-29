@@ -1,9 +1,4 @@
 {
-    "@metadata": {
-      "authors": [
-        "Alex"
-      ]
-    },
     "menu1": "Open a skin...",
     "username": "from an username",
     "url": "from an URL",
@@ -35,5 +30,13 @@
     "js7-2": "Minecraft usernames cannot contain spaces or be blank.",
     "js8-1": "Invalid URL",
     "js8-2": "URLs cannot contain spaces or be blank.",
-    "js-skinfirst": "Open a skin first!"
+    "js-skinfirst": "Open a skin first!",
+    "default": "Default",
+    "nicetodraw": "Nice to draw",
+    "walk": "Walk",
+    "walk2": "Walk 2",
+    "hug": "Hug",
+    "Jump": "Jump",
+    "lookup": "Look up",
+    "random": "Random"
 }

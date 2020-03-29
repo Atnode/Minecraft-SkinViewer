@@ -15,7 +15,6 @@
    }
 ?>
 <!DOCTYPE html>
-<html>
 <?php echo "<html lang='$lang'>"; ?>
 <head>
     <meta charset="UTF-8">
@@ -27,22 +26,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Minecraft SkinViewer <?php echo substr($ver,0,3); ?></title>
     <link rel="icon" type="image/png" href="img/logo.png" />
-    <link href="libs/metro/css/metro.min.css" rel="stylesheet">
-    <link href="libs/metro/css/metro-icons.min.css" rel="stylesheet">
-    <link href="libs/metro/css/metro-responsive.min.css" rel="stylesheet">
-    <link href="libs/metro/css/metro-schemes.min.css" rel="stylesheet">
+    <link href="libs/Metro-UI-CSS-3/css/metro.min.css" rel="stylesheet">
+    <link href="libs/Metro-UI-CSS-3/css/metro-icons.min.css" rel="stylesheet">
+    <link href="libs/Metro-UI-CSS-3/css/metro-responsive.min.css" rel="stylesheet">
+    <link href="libs/Metro-UI-CSS-3/css/metro-schemes.min.css" rel="stylesheet">
     <link href="css/mc-skinviewer.css" rel="stylesheet">
     <script src="libs/jquery/jquery.min.js"></script>
-    <script src="libs/metro/js/metro.min.js"></script>
-    <script src="libs/i18n/CLDRPluralRuleParser.js"></script>
-    <script src="libs/i18n/jquery.i18n.js"></script>
-    <script src="libs/i18n/jquery.i18n.messagestore.js"></script>
-    <script src="libs/i18n/jquery.i18n.language.js"></script>
-    <script src="libs/i18n/jquery.i18n.fallbacks.js"></script>
-    <script src="libs/i18n/jquery.i18n.parser.js"></script>
-    <script src="libs/i18n/jquery.i18n.emitter.js"></script>
-    <script src="libs/i18n/jquery.i18n.emitter.bidi.js"></script>
-    <script src="libs/i18n/main-jquery_i18n.js"></script>
+    <script src="libs/Metro-UI-CSS-3/js/metro.min.js"></script>
+    <script src="libs/CLDRPluralRuleParser/CLDRPluralRuleParser.js"></script>
+    <script src="libs/jquery.i18n/jquery.i18n.js"></script>
+    <script src="libs/jquery.i18n/jquery.i18n.messagestore.js"></script>
+    <script src="libs/jquery.i18n/jquery.i18n.language.js"></script>
+    <script src="libs/jquery.i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="libs/jquery.i18n/jquery.i18n.parser.js"></script>
+    <script src="libs/jquery.i18n/jquery.i18n.emitter.js"></script>
+    <script src="libs/jquery.i18n/jquery.i18n.emitter.bidi.js"></script>
     <script src="js/mc-skinviewer.js"></script>
 	<?php echo "<script>$.i18n({locale: '$lang'})</script>"; ?>
 </head>
@@ -106,10 +104,10 @@
                     <ul class="d-menu" data-role="dropdown" style="display: none;">
                         <li><a class="save" href="#save" target="_blank" data-i18n="png" download>in .png format</a></li>
                         <li><a class="apply-account" href="#apply-account" target="" data-i18n="net">on Minecraft.net</a></li>
-                        <li><a href="#apply-pe" data-i18n="pe"></a></li>
+                        <li><a href="#apply-pe" data-i18n="pe">on Minecraft PE</a></li>
                     </ul>
                 </li>
-                <li data-flexorderorigin="3" data-flexorder="4"><a href="#help" data-i18n="about">on Minecraft PE</a></li>
+                <li data-flexorderorigin="3" data-flexorder="4"><a href="#help" data-i18n="about">About...</a></li>
             </ul>
         </div>
         <div id="content"></div>

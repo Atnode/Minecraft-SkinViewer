@@ -7,7 +7,7 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
   <link href="css/style.css" rel="stylesheet" type="text/css">
   <script src="../../libs/jquery/jquery.min.js"></script>
-  <script src="js/skinview3d.bundle.js"></script>
+  <script src="../../libs/skinview3d/skinview3d.bundle.js"></script>
 </head>
 <body style="background: none">
   <div id="skin_container"></div>

@@ -6,9 +6,12 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
 */
 
+  @import url("lato.css");
+
   body {
-	background: #3c3f41;
-	font-size: 18px;
+  background: #3c3f41;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
 	min-height: 450px !important;
 	animation: fadein 1s;
 	height: auto;
@@ -138,7 +141,7 @@ You should have received a copy of the GNU General Public License along with thi
 	background-color: #333333;
   }
   
-  a.button,
+  .button, a.button,
   a.cycle-button,
   a.round-button,
   a.square-button,
@@ -160,4 +163,17 @@ You should have received a copy of the GNU General Public License along with thi
   
   .dropdown-toggle:focus {
 	outline: none;
+  }
+
+  .input-control input, .input-control select, .input-control textarea {
+    transition: border .10s ease-in-out;
+  }
+
+  .dialog .dialog-close-button:hover {
+    background-color: #33333354;
+    color: #ffffff;
+  }
+  
+  .dialog .dialog-close-button {
+    transition: background-color .10s ease-in-out, color .10s ease-in-out;
   }

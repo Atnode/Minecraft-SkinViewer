@@ -1,16 +1,11 @@
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Roboto'), local('Roboto-Regular'), url(../fonts/Roboto-Regular.woff2) format('woff2');
-  }
+  @import url("../../../css/lato.css");
   
   body {
     width: 100%;
     height: 100%;
     margin: 0;
     font-size: 14px;
-    font-family: "Roboto", serif;
+    font-family: "Lato", serif;
     font-style: normal;
     font-variant: normal;
     text-decoration: none;

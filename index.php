@@ -6,7 +6,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
 -->
 <?php
-   $ver = "3.3.0-dev";
+   $ver = "3.3.1";
    $lc = ""; 
    if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
     $lc = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
@@ -28,13 +28,31 @@ You should have received a copy of the GNU General Public License along with thi
 <head>
   <meta charset="UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="<?php echo $description; ?>" name="description">
-  <meta content="Minecraft SkinViewer" property="og:title">
-  <meta content="<?php echo $description; ?>" property="og:description">
-  <meta content="img/logo.png" property="og:image">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-  <title>Minecraft SkinViewer <?php echo substr($ver,0,3); ?></title>
-  <link href="img/logo.png" rel="icon" type="image/png">
+  <title>Minecraft SkinViewer</title>
+  <link rel="shortcut icon" href="img/logo.png">
+  <link rel="manifest" href="manifest.json" />
+	<meta name="description" content="<?php echo $description; ?>" />
+	<meta property="og:title" content="Minecraft SkinViewer" />
+	<meta property="og:description" content="<?php echo $description; ?>" />
+	<meta name="author" content="Minecraft SkinViewer" />
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Minecraft SkinViewer" />
+	<meta property="og:description" content="<?php echo $description; ?>" />
+	<meta property="og:image" content="img/logo.png" />
+	<meta property="og:site_name" content="Minecraft SkinViewer">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Minecraft SkinViewer">
+	<meta name="twitter:site" content="@Atnode.fr">
+	<meta name="twitter:image" content="img/logo.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="img/apple-touch-icon-180x180.png" />
   <link href="libs/Metro-UI-CSS-3/css/metro.min.css" rel="stylesheet">
   <link href="libs/Metro-UI-CSS-3/css/metro-icons.min.css" rel="stylesheet">
   <link href="libs/Metro-UI-CSS-3/css/metro-responsive.min.css" rel="stylesheet">
@@ -88,7 +106,7 @@ You should have received a copy of the GNU General Public License along with thi
         <p data-i18n="modal3-2">Or scan the QR code on your mobile device to download the skin faster.</p>
       </div><span class="dialog-close-button"></span>
     </div>
-    <div class="dialog" data-close-button="true" data-role="dialog" data-windows-style="true" id="help" style="padding: 20px !important;">
+    <div class="dialog help" data-close-button="true" data-role="dialog" data-windows-style="true" id="help" style="padding: 20px !important;">
       <div class="container">
         <p data-i18n="modal4-1">Minecraft SkinViewer is a Minecraft skins viewer</p>
         <p data-i18n="modal4-2">You can open a skin from an external link (for example, a direct link to the skin image), or from a Minecraft user.</p>
@@ -150,7 +168,7 @@ You should have received a copy of the GNU General Public License along with thi
           <a class="dropdown-toggle" data-i18n="menu2" href="">Save/apply a skin...</a>
           <ul class="d-menu" data-role="dropdown" style="display: none;">
             <li>
-              <a class="save" data-i18n="png" href="#save" target="_blank">in .png format</a>
+              <a class="save" data-i18n="png" href="#save">in .png format</a>
             </li>
             <li>
               <a class="apply-account" data-i18n="net" href="#apply-account" target="">on Minecraft.net</a>

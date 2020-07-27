@@ -33,6 +33,7 @@ You should have received a copy of the GNU General Public License along with thi
     control.enableRotate = true;
     control.enableZoom = true;
     control.enablePan = true;
+    skinViewer.camera.position.z = 90
     skinViewer.animations.speed = 0.7;
 
     $(window).bind('resize', function(e) {

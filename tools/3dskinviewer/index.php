@@ -22,11 +22,10 @@ You should have received a copy of the GNU General Public License along with thi
   <div id="skin_container"></div>
   <a class="btn" id="anim" href="#"><span class="mif-play"></span></a>
   <script>
-    let skinViewer = new skinview3d.SkinViewer({
-      domElement: document.getElementById("skin_container"),
+    let skinViewer = new skinview3d.SkinViewer(document.getElementById("skin_container"), {
       width: window.innerWidth,
       height: window.innerHeight,
-      skinUrl: "<?php if (isset($_GET['url'])) {echo $_GET['url'];} ?>"
+      skin: "<?php if (isset($_GET['url'])) {echo $_GET['url'];} ?>"
     });
 
 
@@ -34,7 +33,6 @@ You should have received a copy of the GNU General Public License along with thi
     control.enableRotate = true;
     control.enableZoom = true;
     control.enablePan = true;
-    skinViewer.camera.position.z = 90
     skinViewer.animations.speed = 0.7;
 
     $(window).bind('resize', function(e) {

@@ -14,12 +14,13 @@ You should have received a copy of the GNU General Public License along with thi
   <meta content="chrome=1" http-equiv="X-UA-Compatible">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
   <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="../../libs/Metro-UI-CSS-3/css/metro-icons.min.css" rel="stylesheet">
   <script src="../../libs/jquery/jquery.min.js"></script>
   <script src="../../libs/skinview3d/skinview3d.bundle.js"></script>
 </head>
 <body style="background: none">
   <div id="skin_container"></div>
-  <a class="btn" id="anim" href="#">▶</a>
+  <a class="btn" id="anim" href="#"><span class="mif-play"></span></a>
   <script>
     let skinViewer = new skinview3d.SkinViewer({
       domElement: document.getElementById("skin_container"),
@@ -47,13 +48,13 @@ You should have received a copy of the GNU General Public License along with thi
         let rotate = skinViewer.animations.add(skinview3d.RotatingAnimation);
         let walk = skinViewer.animations.add(skinview3d.WalkingAnimation);
         click = 1;
-        $('#anim').html('&#9208;');
+        $('#anim').html('<span class="mif-pause"></span>');
       } else {
         skinViewer.animations.paused = !skinViewer.animations.paused;
         if (skinViewer.animations.paused == false) {
-          $('#anim').html('&#9208;'); 
+          $('#anim').html('<span class="mif-pause"></span>'); 
         } else {
-          $('#anim').html('&#9654;'); 
+          $('#anim').html('<span class="mif-play"></span>'); 
         }
       }
     });
